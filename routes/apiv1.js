@@ -27,7 +27,7 @@ exports.getWeather = function(req, res) {
     		//console.error("Failed to send request to openweathermap.org", err);
     	} else {
     		if(body.cod === 200) {
-    			alert("this si some code we execute");
+
     			var weath = "Conditions are " + body.weather[0].main + " and temperature is " + body.main.temp + ' F';
     			var response = {city: body.name, weather: weath};
     			return res.status(200).send(response);
