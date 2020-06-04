@@ -5,7 +5,7 @@ function Zip(props) {
     const [validationError, setValidationError] = useState(null);
 
     const validate = (event) => {
-        const zipCodePattern = /w*/;
+        const zipCodePattern = /[w ]*/;
         const valid = zipCodePattern.test(event.target.value);
         if (!valid) {
             setValidationError('* Please enter a name of a New Zealand city');
@@ -30,7 +30,7 @@ function Zip(props) {
                         type="text" 
                         className="form-control" 
                         id="usr" 
-                        placeholder="newZealand city name"
+                        placeholder="New Zealand city name"
                         onKeyPress={(event) => {
                             if (event.key === "Enter") {
                                 validate(event);

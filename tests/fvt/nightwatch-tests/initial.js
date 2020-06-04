@@ -1,7 +1,7 @@
 
 
 module.exports = {
-    '@disabled': false,  // This will prevent the test module from running.
+
   
     after: (browser, done) => {
         console.log('After called')
@@ -56,3 +56,4 @@ module.exports = {
         demodoi.expect.element('@invalidCity').text.to.equal('* should be a 5 digit number only');
     },
 };
+
